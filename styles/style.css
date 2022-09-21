@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: Montserrat;
+    src: url(/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(/fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Thin;
+    src: url(/fonts/Montserrat/static/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-family: Montserrat;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+}
+.theme{
+    display: grid;
+    justify-items: end;
+    margin: 0;
+}
+
+
+.switch-btn {
+    display: inline-block;
+    width: 30px; /* ширина переключателя */
+    height: 15px; /* высота переключателя */
+    border-radius: 15px; /* радиус скругления */
+    background: #333; /* цвет фона */
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+    content: "";
+    height: 15px; /* высота кнопки */
+    width: 15px; /* ширина кнопки */
+    border-radius: 15px; /* радиус кнопки */
+    background: #ff9501; /* цвет кнопки */
+    /*top: -6px; !* положение кнопки по вертикали относительно основы *!*/
+    /*left: -6px; !* положение кнопки по горизонтали относительно основы *!*/
+    transition-duration: 300ms; /* анимация */
+    box-shadow: 0 0 10px 0 #999999; /* тень */
+    position: absolute;
+    z-index: 1;
+}
+.switch-on {
+    background: #fff;
+    box-shadow: inset 0 0 10px 0 #999999; /* тень */
+}
+.switch-on::after {
+    left: 15px;
+    background: #ff9501;
+}
+
+
+
+.calc-screen {
+    height: 100px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+}
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+    "ac plus-minus percent division"
+    "seven eight nine mylti"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+}
+.btn {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+}
+.btn:hover{
+    filter: brightness(120%);
+}
+
+.btn:active{
+    filter: brightness(80%);
+}
+.btn.bg-grey {
+    background: #a6a6a6;
+}
+
+.btn.bg-orange {
+    background: #ff9501;
+}
+
+
+
+
+.dark {
+    background: linear-gradient(45deg, rgb(49, 49, 49), rgb(7, 7, 7));
+}
+/* */
